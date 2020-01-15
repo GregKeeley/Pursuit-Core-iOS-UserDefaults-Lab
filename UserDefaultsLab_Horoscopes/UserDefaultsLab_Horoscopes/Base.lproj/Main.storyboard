@@ -44,12 +44,15 @@
                     <navigationItem key="navigationItem" id="bxV-VY-KqO">
                         <barButtonItem key="rightBarButtonItem" title="Change Horoscope" id="uEx-uH-Xw2">
                             <connections>
-                                <segue destination="jcj-q6-6iw" kind="presentation" id="xjI-MH-JdK"/>
+                                <segue destination="jcj-q6-6iw" kind="presentation" id="b6o-1T-Oos"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="changeHoroscope" destination="uEx-uH-Xw2" id="sO5-3P-mbS"/>
+                        <outlet property="changeHoroscope" destination="uEx-uH-Xw2" id="Ms4-lz-01A"/>
+                        <outlet property="horoscopeMessageText" destination="Vm4-8g-idO" id="SgB-yP-Gjr"/>
+                        <outlet property="horoscopeNameLabel" destination="aJk-hI-0MF" id="wnI-4P-H8A"/>
+                        <segue destination="jcj-q6-6iw" kind="show" id="Yeu-VB-ctf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -92,13 +95,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="dwx-Qm-K3i"/>
                     <connections>
+                        <outlet property="currentSignLabel" destination="3Su-8u-zv5" id="a1O-bd-lvN"/>
                         <outlet property="horoscopePicker" destination="mlB-HQ-6hV" id="XnG-9H-duQ"/>
-                        <outlet property="signNameLabel" destination="3Su-8u-zv5" id="hul-kU-Z8e"/>
+                        <outlet property="setHoroscopeButton" destination="Kt4-NW-aN5" id="ui5-Ag-TQl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gz8-hA-SEl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1760.8695652173915" y="113.83928571428571"/>
+            <point key="canvasLocation" x="1835" y="114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="phe-gD-PLW">
@@ -119,4 +123,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="b6o-1T-Oos"/>
+    </inferredMetricsTieBreakers>
 </document>

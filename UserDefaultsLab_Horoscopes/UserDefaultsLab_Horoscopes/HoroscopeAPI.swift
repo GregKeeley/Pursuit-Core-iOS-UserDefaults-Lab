@@ -11,7 +11,7 @@ import Foundation
 struct HoroscopeAPI {
     static func getHoroscopes(for horoscope: String, completion: @escaping (Result<Horoscope, AppError>) -> ()) {
         
-        let endpointURL = " http://sandipbgt.com/theastrologer/api/horoscope/\(horoscope)/today"
+        let endpointURL = "http://sandipbgt.com/theastrologer/api/horoscope/\(horoscope)/today"
         guard let url = URL(string: endpointURL) else {
             completion(.failure(.badURL(endpointURL)))
             return
