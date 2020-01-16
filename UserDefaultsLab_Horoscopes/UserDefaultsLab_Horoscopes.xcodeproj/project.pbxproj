@@ -16,7 +16,8 @@
 		C11AB6C523CE9E8E00372604 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11AB6C423CE9E8E00372604 /* NetworkHelper.swift */; };
 		C11AB6C723CE9EAC00372604 /* HoroscopeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11AB6C623CE9EAC00372604 /* HoroscopeAPI.swift */; };
 		C11AB6C923CE9F1B00372604 /* HoroscopeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11AB6C823CE9F1B00372604 /* HoroscopeModel.swift */; };
-		C11AB6CB23CEA5F200372604 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11AB6CA23CEA5F200372604 /* DetailViewController.swift */; };
+		C11AB6CB23CEA5F200372604 /* SetHoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11AB6CA23CEA5F200372604 /* SetHoroscopeViewController.swift */; };
+		C1474EC923CFF62A0049AFDA /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1474EC823CFF62A0049AFDA /* UserPreference.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,8 @@
 		C11AB6C423CE9E8E00372604 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		C11AB6C623CE9EAC00372604 /* HoroscopeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPI.swift; sourceTree = "<group>"; };
 		C11AB6C823CE9F1B00372604 /* HoroscopeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeModel.swift; sourceTree = "<group>"; };
-		C11AB6CA23CEA5F200372604 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C11AB6CA23CEA5F200372604 /* SetHoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetHoroscopeViewController.swift; sourceTree = "<group>"; };
+		C1474EC823CFF62A0049AFDA /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +69,8 @@
 				C11AB6B023CE9CB500372604 /* AppDelegate.swift */,
 				C11AB6B223CE9CB500372604 /* SceneDelegate.swift */,
 				C11AB6B423CE9CB500372604 /* ViewController.swift */,
-				C11AB6CA23CEA5F200372604 /* DetailViewController.swift */,
+				C1474EC823CFF62A0049AFDA /* UserPreference.swift */,
+				C11AB6CA23CEA5F200372604 /* SetHoroscopeViewController.swift */,
 				C11AB6C423CE9E8E00372604 /* NetworkHelper.swift */,
 				C11AB6C623CE9EAC00372604 /* HoroscopeAPI.swift */,
 				C11AB6C823CE9F1B00372604 /* HoroscopeModel.swift */,
@@ -155,8 +158,9 @@
 				C11AB6C923CE9F1B00372604 /* HoroscopeModel.swift in Sources */,
 				C11AB6B123CE9CB500372604 /* AppDelegate.swift in Sources */,
 				C11AB6C723CE9EAC00372604 /* HoroscopeAPI.swift in Sources */,
+				C1474EC923CFF62A0049AFDA /* UserPreference.swift in Sources */,
 				C11AB6B323CE9CB500372604 /* SceneDelegate.swift in Sources */,
-				C11AB6CB23CEA5F200372604 /* DetailViewController.swift in Sources */,
+				C11AB6CB23CEA5F200372604 /* SetHoroscopeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

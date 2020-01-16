@@ -12,6 +12,7 @@ struct HoroscopeAPI {
     static func getHoroscopes(for horoscope: String, completion: @escaping (Result<Horoscope, AppError>) -> ()) {
         
         let endpointURL = "http://sandipbgt.com/theastrologer/api/horoscope/\(horoscope)/today"
+        print(endpointURL)
         guard let url = URL(string: endpointURL) else {
             completion(.failure(.badURL(endpointURL)))
             return
@@ -26,7 +27,7 @@ struct HoroscopeAPI {
                 let results = try JSONDecoder().decode(Horoscope.self, from: data)
                     completion(.success(results))
                 } catch {
-                    
+                    completion(.failure(.decodingError(error)))
                 }
             }
         }

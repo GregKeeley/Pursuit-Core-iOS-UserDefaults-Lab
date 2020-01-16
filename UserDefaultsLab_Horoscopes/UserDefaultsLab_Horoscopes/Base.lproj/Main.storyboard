@@ -59,26 +59,29 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="113.83928571428571"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Set Horoscope View Controller-->
         <scene sceneID="sVV-K5-j1K">
             <objects>
-                <viewController id="jcj-q6-6iw" customClass="DetailViewController" customModule="UserDefaultsLab_Horoscopes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jcj-q6-6iw" customClass="SetHoroscopeViewController" customModule="UserDefaultsLab_Horoscopes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UCh-jB-hIt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Sign:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Su-8u-zv5">
-                                <rect key="frame" x="156.5" y="185" width="101" height="21"/>
+                                <rect key="frame" x="156.5" y="256" width="101" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlB-HQ-6hV">
-                                <rect key="frame" x="0.0" y="296" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="367" width="414" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kt4-NW-aN5">
-                                <rect key="frame" x="140.5" y="614" width="133" height="30"/>
+                                <rect key="frame" x="140.5" y="685" width="133" height="30"/>
                                 <state key="normal" title="Change Horoscope"/>
+                                <connections>
+                                    <segue destination="htg-Yq-YRs" kind="unwind" unwindAction="unwindWithSegue:" id="4CX-dZ-voz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -101,6 +104,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gz8-hA-SEl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="htg-Yq-YRs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1835" y="114"/>
         </scene>
@@ -124,6 +128,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b6o-1T-Oos"/>
+        <segue reference="Yeu-VB-ctf"/>
     </inferredMetricsTieBreakers>
 </document>

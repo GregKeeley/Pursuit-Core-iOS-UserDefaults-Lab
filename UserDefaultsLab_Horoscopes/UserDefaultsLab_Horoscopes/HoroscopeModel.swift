@@ -12,7 +12,4 @@ struct Horoscope: Decodable {
     let sunsign: String
     let date: String
     let horoscope: String
-    let mood: String
-    let keywords: String
-    let intensity: String
 }

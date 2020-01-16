@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class SetHoroscopeViewController: UIViewController {
     
     @IBOutlet weak var horoscopePicker: UIPickerView!
     @IBOutlet weak var currentSignLabel: UILabel!
@@ -34,13 +34,13 @@ class DetailViewController: UIViewController {
     }
 }
 
-extension DetailViewController: UIPickerViewDelegate {
+extension SetHoroscopeViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return horoscopeSelection[row]
     }
 }
 
-extension DetailViewController: UIPickerViewDataSource {
+extension SetHoroscopeViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
