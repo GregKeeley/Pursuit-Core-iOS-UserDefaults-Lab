@@ -30,10 +30,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
         selectHoroscope()
         loadHoroscope()
         horoscopeNameLabel.text = selectedHoroscopeStr.rawValue
         horoscopeMessageText.text = horoscope?.horoscope
+        print(selectedHoroscopeInt.rawValue)
+
+    }
+    func updateUI() {
+        if let horoscopeInt = UserPreference.shared.getHoroscopeNum() {
+            selectedHoroscopeInt = horoscopeInt
+        }
+        if let horoscopeStr = UserPreference.shared.getHoroscope() {
+            selectedHoroscopeStr = horoscopeStr
+        }
     }
     func selectHoroscope() {
         switch selectedHoroscopeInt {
@@ -79,6 +90,7 @@ class ViewController: UIViewController {
         
     }
     func loadHoroscope() {
+        print("")
         HoroscopeAPI.getHoroscopes(for: selectedHoroscopeStr.rawValue.lowercased()) { [weak self] result in
             switch result {
             case .failure(let appError):

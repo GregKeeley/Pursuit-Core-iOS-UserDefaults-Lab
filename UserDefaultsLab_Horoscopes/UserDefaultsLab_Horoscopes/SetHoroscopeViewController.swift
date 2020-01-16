@@ -30,6 +30,7 @@ class SetHoroscopeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let aComponent = horoscopePicker?.selectedRow(inComponent: 0) {
             selectedHoroscope = HoroscopeNum(rawValue: aComponent)
+            UserPreference.shared.updateHoroscopeNum(with: selectedHoroscope!)
         }
         
     }

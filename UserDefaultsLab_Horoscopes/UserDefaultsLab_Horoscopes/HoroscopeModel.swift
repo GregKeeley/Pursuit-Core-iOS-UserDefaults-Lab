@@ -8,8 +8,16 @@
 
 import Foundation
 
-struct Horoscope: Decodable {
+// MARK: - Horoscope
+struct Horoscope: Codable {
     let sunsign: String
+    let credit: String
     let date: String
     let horoscope: String
+    let meta: Meta
+}
+
+// MARK: - Meta
+struct Meta: Codable {
+    let mood, keywords, intensity: String
 }
