@@ -16,7 +16,8 @@ class SetHoroscopeViewController: UIViewController {
     
     
     var horoscope: Horoscope?
-    var selectedHoroscope: Int?
+    var selectedHoroscope: HoroscopeNum?
+    var horoscopeStr: String?
     
     let horoscopeSelection = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
     override func viewDidLoad() {
@@ -28,8 +29,11 @@ class SetHoroscopeViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let aComponent = horoscopePicker?.selectedRow(inComponent: 0) {
-          selectedHoroscope = aComponent
+            selectedHoroscope = HoroscopeNum(rawValue: aComponent)
         }
+        
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
     }
 }

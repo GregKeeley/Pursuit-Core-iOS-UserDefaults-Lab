@@ -15,7 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var horoscopeMessageText: UITextView!
     
     var horoscope: Horoscope?
-    var selectedHoroscopeInt = 5
+    var selectedHoroscopeInt = HoroscopeNum.aries {
+        didSet {
+            UserPreference.shared.updateHoroscopeNum(with: selectedHoroscopeInt)
+            print(selectedHoroscopeInt.rawValue)
+        }
+    }
     var selectedHoroscopeStr = UserHoroscope.aries {
         didSet {
             horoscopeNameLabel.text = selectedHoroscopeStr.rawValue
@@ -32,33 +37,46 @@ class ViewController: UIViewController {
     }
     func selectHoroscope() {
         switch selectedHoroscopeInt {
-               case 0:
+        case HoroscopeNum.aries:
+            
                 selectedHoroscopeStr = UserHoroscope.aries
-               case 1:
+        case HoroscopeNum.taurus:
+            
                 selectedHoroscopeStr = UserHoroscope.taurus
-               case 2:
+        case HoroscopeNum.gemini:
+            
                 selectedHoroscopeStr = UserHoroscope.gemini
-               case 3:
+        case HoroscopeNum.cancer:
+            
                 selectedHoroscopeStr = UserHoroscope.cancer
-               case 4:
+        case HoroscopeNum.leo:
+            
                 selectedHoroscopeStr = UserHoroscope.leo
-               case 5:
+        case HoroscopeNum.virgo:
+           
                 selectedHoroscopeStr = UserHoroscope.virgo
-               case 6:
+        case HoroscopeNum.libra:
+            
                 selectedHoroscopeStr = UserHoroscope.libra
-               case 7:
+        case HoroscopeNum.scorpio:
+            
                 selectedHoroscopeStr = UserHoroscope.scorpio
-               case 8:
+        case HoroscopeNum.sagittarius:
+            
                 selectedHoroscopeStr = UserHoroscope.sagittarius
-               case 9:
+        case HoroscopeNum.capricorn:
+            
                 selectedHoroscopeStr = UserHoroscope.capricorn
-               case 10:
+        case HoroscopeNum.aquarius:
+            
                 selectedHoroscopeStr = UserHoroscope.aquarius
-               case 11:
+        case HoroscopeNum.pisces:
+            
                 selectedHoroscopeStr = UserHoroscope.pisces
-               default:
-                selectedHoroscopeStr = UserHoroscope.capricorn
-               }
+        default:
+            selectedHoroscopeStr = UserHoroscope.capricorn
+        }
+        
     }
     func loadHoroscope() {
         HoroscopeAPI.getHoroscopes(for: selectedHoroscopeStr.rawValue.lowercased()) { [weak self] result in
@@ -75,7 +93,7 @@ class ViewController: UIViewController {
         guard let setHoroscopeVC = segue.source as? SetHoroscopeViewController else {
         fatalError("Failed to unwind properly")
     }
-        selectedHoroscopeInt = setHoroscopeVC.selectedHoroscope ?? 2
+        selectedHoroscopeInt = setHoroscopeVC.selectedHoroscope ?? HoroscopeNum.aries
        selectHoroscope()
     }
     

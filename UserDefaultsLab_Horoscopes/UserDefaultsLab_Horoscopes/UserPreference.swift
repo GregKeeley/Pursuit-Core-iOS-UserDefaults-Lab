@@ -22,12 +22,24 @@ enum UserHoroscope: String {
     case aquarius = "Aquarius"
     case pisces = "Pisces"
 }
-enum horoscopeNum {
-
+enum HoroscopeNum: Int {
+     case aries = 0
+     case taurus = 1
+     case gemini = 2
+     case cancer = 3
+     case leo = 4
+     case virgo = 5
+     case libra = 6
+     case scorpio = 7
+     case sagittarius = 8
+     case capricorn = 9
+     case aquarius = 10
+     case pisces = 11
 }
 
 struct UserPreferenceKey {
     static let horoscope = "Horoscope"
+    static let horoscopeNum = "HoroscopeNum"
 }
 
 class UserPreference {
@@ -44,5 +56,13 @@ class UserPreference {
         }
         return UserHoroscope(rawValue: horoscopeName)
     }
-    func updateHoroscopeNum(with horoscopeNum: )
+    func updateHoroscopeNum(with horoscopeNum: HoroscopeNum) {
+        standard.set(horoscopeNum.rawValue, forKey: UserPreferenceKey.horoscopeNum)
+    }
+    func getHoroscopeNum() -> HoroscopeNum? {
+        guard let horoscopeNum = standard.object(forKey: UserPreferenceKey.horoscopeNum) as? Int else {
+            return nil
+        }
+        return HoroscopeNum(rawValue: horoscopeNum)
+    }
 }
